@@ -5,14 +5,8 @@ import blogData from "../data/blog";
 export default function ArticleList() {
     const articleList = blogData.posts.map((postObj) => {
         return (
-            <>
         <Article key={postObj.id} title={postObj.title} date={postObj.date} preview={postObj.preview} />
-            </>
         );
     })
-    return (
-        <main>
-            {articleList}
-        </main>
-    )
+    return <main> {articleList}</main>;
 }
